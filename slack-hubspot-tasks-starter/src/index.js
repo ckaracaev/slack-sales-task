@@ -170,12 +170,12 @@ app.command('/task', async ({ ack, client, body }) => {
 
 // --- Options handlers for external_selects ---
 app.options('deal_select', async ({ options, ack }) => {
-  const items = await searchDeals(options.value || '');
-  const opts = items.map(d => ({
-    text: { type: 'plain_text', text: (d.properties?.dealname || `Deal ${d.id}`).slice(0, 75) },
-    value: d.id
-  }));
-  await ack({ options: opts });
+  console.log('deal_select fired with query:', options?.value);
+  await ack({
+    options: [
+      { text: { type: 'plain_text', text: 'Test Deal' }, value: '123' }
+    ]
+  });
 });
 
 app.options('owner_select', async ({ options, ack }) => {
