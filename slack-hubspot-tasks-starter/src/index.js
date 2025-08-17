@@ -1,5 +1,6 @@
 import express from 'express';
-import { App, LogLevel, ExpressReceiver } from '@slack/bolt';
+import Bolt from '@slack/bolt';
+const { App, LogLevel, ExpressReceiver } = Bolt;
 import axios from 'axios';
 import cron from 'node-cron';
 
