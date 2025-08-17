@@ -1,0 +1,20 @@
+{
+  "name": "slack-hubspot-tasks-starter",
+  "version": "1.0.0",
+  "description": "Slack app to create/complete HubSpot tasks from Slack and post daily digests",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.17.1",
+    "axios": "^1.6.7",
+    "node-cron": "^3.0.3",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
